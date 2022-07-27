@@ -1,0 +1,18 @@
+
+h1{
+	color:black;
+	text-align : center;
+}
+fieldset{
+	width: 406px;
+    margin: 0 auto;
+}
+form {
+	width: 100%;
+	
+	
+	
+}
+.text-center{
+	text-align: center;
+}

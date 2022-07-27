@@ -1,0 +1,116 @@
+package com.aoua;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+
+@WebServlet("/Monservlet")
+public class Monservlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
+    public Monservlet() {
+        super();
+        
+    }
+    
+    public class user{
+    	private String nom;
+    	private String prenom;
+    	private String email;
+    	private String pseudo;
+    	
+    	
+    	public String getNom() {
+			return nom;
+		}
+		public void setNom(String nom) {
+			this.nom = nom;
+		}
+		public String getPrenom() {
+			return prenom;
+		}
+		public void setPrenom(String prenom) {
+			this.prenom = prenom;
+		}
+		public String getEmail() {
+			return email;
+		}
+		public void setEmail(String email) {
+			this.email = email;
+		}
+		public String getPseudo() {
+			return pseudo;
+		}
+		public void setPseudo(String pseudo) {
+			this.pseudo = pseudo;
+		}
+		public user() {
+    		
+    	}
+    	public user(String nom,
+    	 String prenom,
+    	 String email,
+    	 String pseudo) {
+    		this.nom = nom;
+    		this.prenom=prenom;
+    		this.email= email;
+    		this.pseudo= pseudo;
+    	}
+    };
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		this.getServletContext().getRequestDispatcher("/Inscrire.jsp").forward(request, response);
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String nom=request.getParameter("nom");
+		request.setAttribute("nom", nom);
+		String prenom=request.getParameter("prenom");
+		request.setAttribute("prenom", prenom);
+		String pseudo=request.getParameter("pseudo");
+		request.setAttribute("pseudo", pseudo);
+		String mail=request.getParameter("mail");
+		request.setAttribute("mail", mail);
+		String password=request.getParameter("password");
+		request.setAttribute("password", password);
+		String confirmation=request.getParameter("confirmation");
+		request.setAttribute("confirmation", confirmation);
+		
+		
+		
+		HttpSession session = request.getSession();
+		
+		session.setAttribute("nom", nom);					
+		session.setAttribute("prenom", prenom);
+		session.setAttribute("pseudo", pseudo);
+		session.setAttribute("mail", mail);
+		
+		
+		List<user> Liste = new ArrayList<>();
+		
+		
+		
+		this.getServletContext().getRequestDispatcher("/Accueil.jsp").forward(request, response);
+	
+        if(password.equals(confirmation)) {
+        	request.getRequestDispatcher("Accueil.jsp").forward(request, response);
+        	}
+        else {
+        	request.getRequestDispatcher("Inscrire.jsp").forward(request, response);
+}
+        }
+}

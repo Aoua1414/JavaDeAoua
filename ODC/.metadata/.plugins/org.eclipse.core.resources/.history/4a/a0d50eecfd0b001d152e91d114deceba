@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inscription</title>
+</head>
+<body>
+<h2>INSCRIPTION</h2>
+
+    <form method="post"  action = "Accueil">
+     <div>
+    <label for= "nom" > NOM :</label> 
+    <input type="text" id= "nom" name="nom"/>
+    </div>
+    <div>
+    <br>
+     <label for= "prenom" > PRENOM :</label> 
+    <input type="text" />
+    </div>
+    
+    <div>
+    <br>
+     <label for= "pseudo" > PSEUDO :</label> 
+    <input type="text" /> 
+    </div>
+    
+    <div>
+    <br>
+     <label for= "mail" > MAIL :</label> 
+    <input type="text" />
+    </div>
+    
+    <div>
+    <br>
+     <label for= "mot de passe" > MOT DE PASSE :</label> 
+    <input type="text" />
+    </div>
+    
+    <div>
+    <br>
+     <label for= "repeter" > REPETER MOT DE PASSE :</label> 
+    <input type="text" />
+    </div>
+    <br>
+    <button>S'inscrire</button>
+    
+    
+    
+    </form>
+
+<p> 
+
+</p>
+</body>
+</html>

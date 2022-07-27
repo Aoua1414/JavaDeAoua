@@ -1,0 +1,15 @@
+
+h2{
+	color:blue;
+	text-align : center;
+
+}
+form {
+	
+	text-align : center;
+	background-color:#00ffff;
+	margin-bottom: 15px;
+  padding: 10px;
+	
+	
+}

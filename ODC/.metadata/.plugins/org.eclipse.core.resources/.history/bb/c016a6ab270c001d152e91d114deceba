@@ -1,0 +1,16 @@
+
+h2{
+	color:#00ffff;
+	text-align : center;
+
+}
+form {
+	
+	text-align : center;
+	background-color:#00ffff;
+	width: 90px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+	
+}

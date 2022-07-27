@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [26/Jul/2022:15:17:16 +0000] "GET /MonServletJsp/Accueil HTTP/1.1" 200 1248
+0:0:0:0:0:0:0:1 - - [26/Jul/2022:15:17:16 +0000] "GET /MonServletJsp/aoua.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [26/Jul/2022:15:17:16 +0000] "GET /favicon.ico HTTP/1.1" 404 692
+0:0:0:0:0:0:0:1 - - [26/Jul/2022:15:18:10 +0000] "POST /MonServletJsp/Accueil HTTP/1.1" 500 483
+0:0:0:0:0:0:0:1 - - [26/Jul/2022:15:18:50 +0000] "POST /MonServletJsp/Monservlet2 HTTP/1.1" 200 626
+0:0:0:0:0:0:0:1 - - [26/Jul/2022:15:18:56 +0000] "POST /MonServletJsp/Accueil HTTP/1.1" 500 479

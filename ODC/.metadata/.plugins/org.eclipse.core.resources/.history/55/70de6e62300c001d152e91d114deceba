@@ -1,0 +1,39 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+
+<title>Accueil</title>
+</head>
+<link rel="stylesheet" href="aoua.css" type="text/css">
+<body>
+<h1>ACCUEIL</h1>
+	<br>
+	<h2>BIENVENUE <%=request.getAttribute("nom") %></h2>
+ 	<c:if test="${!empty sessionScope.prenom && !empty sessionScope.nom }">
+		<p> BIENVENUE ${sessionScope.prenom } ${sessionScope.nom } !</p>
+	</c:if>
+
+
+  <form method="post" action = "Login">  
+  <div class="text-center">
+ 
+  </div>
+   </form>
+   <fieldset>
+  <p> LISTE: </p>
+  <br>
+   <%
+		String nom = (String) request.getAttribute("nom");
+		String prenom = (String) request.getAttribute("prenom");
+		out.println(nom + prenom);
+ %>
+  </fieldset>
+  <br>
+   <input type= "submit" value = "Deconnecter"/>
+</body>
+</html>

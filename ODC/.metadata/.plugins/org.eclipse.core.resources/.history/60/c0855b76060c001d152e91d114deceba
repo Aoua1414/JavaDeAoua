@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Accueil</title>
+</head>
+<body>
+<p>
+<c:if test="${!empty sessionScope.prenom && !empty sessionScope.nom }">
+		<p> BIENVENUE ${sessionScope.prenom } ${sessionScope.nom } !</p>
+	</c:if>
+
+<%
+String nom = (String) request.getAttribute("nom");
+String prenom = (String) request.getAttribute("prenom");
+out.println(nom+" "+prenom);
+%>
+</p>
+  <form method="post" action = "Login">
+  
+  <input type= "submit" value = "Deconnecter"/>
+   </form>
+</body>
+</html>
